@@ -21,9 +21,10 @@ def top5brands_21():
     df_21 = finalmerge_df[finalmerge_df['BIRTH_DATE'] <= '2004-02-28'] #filter for 21+ (hard coding here, sorry)
     df_brand = df_21.groupby('BRAND')['BRAND'].count() #aggregates instances of each brands
     top_5 = df_brand.nlargest(5) #sorts and filters the top 5 brands
-    print(top_5)
+    print('Top 5 Brands under the 21+ demographic')
+    print(top_5,'\n')
 
-#top5brands_21()
+top5brands_21()
 
 ###
 
@@ -32,7 +33,8 @@ def top5brands_6mon():
     df_6months = finalmerge_df[finalmerge_df['CREATED_DATE'] <= '2024-08-28'] #filter for accounts 6 months or older (again, apologies for hard coding)
     df_brandbysales = df_6months.groupby('BRAND')['FINAL_SALE'].sum()
     top_5 = df_brandbysales.nlargest(5)
-    print(top_5)
+    print('Top 5 Brands for those with users who joined at least 6 months old')
+    print(top_5,'\n')
 
 #top5brands_6mon()
 
@@ -48,9 +50,10 @@ def wellness_bygeneration():
     df_generation = df_health_wellness.groupby('Generations')['FINAL_SALE'].sum() #grouping generation by sales
     total_sales = df_health_wellness['FINAL_SALE'].sum() #total sales to use in percentage calculation
     percentage_by_gen = (df_generation / total_sales) * 100 #percentage of sales by generation
-    print(percentage_by_gen)
+    print('Percentage of sales by Generation in Health & Wellness')
+    print(percentage_by_gen,'\n')
 
-#wellness_bygeneration()
+wellness_bygeneration()
 
 ######
 
@@ -58,9 +61,10 @@ def wellness_bygeneration():
 def power_users():
     df_power = df_transactions.groupby('USER_ID')['RECEIPT_ID'].count() #grouping users by their associated reciepts
     top5 = df_power.nlargest(5) #filtering top 5 users
-    print(top5)
+    print("Fetch's Power Users")
+    print(top5,'\n')
 
-#power_users()
+power_users()
 
 ###
 
@@ -69,9 +73,10 @@ def salsaverde():
     df_salsa = finalmerge_df[finalmerge_df['CATEGORY_2'] == 'Dips & Salsa'] #filter on dips+salsa
     top_dips = df_salsa.groupby('BRAND')['FINAL_QUANTITY'].sum() #aggregate the quantities for each brand
     big_dipper = top_dips.nlargest(1) #show the top brand
-    print(big_dipper)
+    print('Top Dip & Salsa Brand')
+    print(big_dipper,'\n')
 
-#salsaverde()
+salsaverde()
 
 ###
 
@@ -81,6 +86,7 @@ def yearly_growth():
     df_yearly_signups = df_users.groupby('Year')['Year'].count() #counting
     df_yearly_signups = df_yearly_signups.reset_index(name = 'New Users')
     df_yearly_signups['Percent Growth'] = df_yearly_signups['New Users'].pct_change() * 100
+    print('Fetch Yearly Growth')
     print(df_yearly_signups)
 
 yearly_growth()

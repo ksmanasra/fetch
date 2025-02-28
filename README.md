@@ -7,7 +7,7 @@ Repository includes
 3. Slack Message
 
 
-First: Explore the Data
+First: Explore the Data (exploration using Google Sheets)
 1. Are there any data quality issues present?
     >Yes. Breakdown by dataset:
 

@@ -78,7 +78,9 @@ def salsaverde():
 """ 6. At what percent has Fetch grown year over year? """
 def yearly_growth():
     df_users['Year'] = df_users['CREATED_DATE'].dt.year #make column for year of account creation
-    df_yearly_signups = df_users.groupby('Year')['Year'].count() #counting 
+    df_yearly_signups = df_users.groupby('Year')['Year'].count() #counting
+    df_yearly_signups = df_yearly_signups.reset_index(name = 'New Users')
+    df_yearly_signups['Percent Growth'] = df_yearly_signups['New Users'].pct_change() * 100
     print(df_yearly_signups)
 
 yearly_growth()

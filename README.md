@@ -40,7 +40,7 @@ Second: provide SQL queries (doing this using python+pandas)
         >Defining "power users" as users who scanned the most receipts, it is a more accurate definition for Fetch versus seeing who bought the most items or who has spent them most. We will go with the theme of the previous questions and list the top 5 users.
 
         >The following output are the top 5 "power users" (there are no names, so we will categorize by the given ID):
-        
+
             USER_ID                     SCANNED
             62925c1be942f00613f7365e    10
             64e62de5ca929250373e6cf5    10
@@ -54,20 +54,20 @@ Second: provide SQL queries (doing this using python+pandas)
     3. At what percent has Fetch grown year over year?
         >Growth can either be defined by user growth over each year, or the amount of receipts scanned year over year. Since Fetch gathers data it needs from scanned receipts, it would be more significant to use the total amount of receipts scanned each year to understand Fetch's growth. Although we run into an issue, all scan dates are within 2024 in the provided data. We can revert back to analyze Fetch's growth through how many users made accounts each year.
 
-        >Year over year, based on when users signed up for Fetch, Fetch has grown as follows:
-            Year    New Users
-            2014       30
-            2015       51
-            2016       70
-            2017      644
-            2018     2168
-            2019     7093
-            2020    16883
-            2021    19159
-            2022    26807
-            2023    15464
-            2024    11631
+        >Year over year, based on new users, Fetch has grown as follows:
 
+            Year     New Users   Percent Growth
+            2014         30               -
+            2015         51          70.00%
+            2016         70          37.25%
+            2017        644          82.00%
+            2018       2168         236.65%
+            2019       7093         227.17%
+            2020      16883         138.02%
+            2021      19159          13.48%
+            2022      26807          39.92%
+            2023      15464         -42.31%
+            2024      11631         -24.79%
 
 Third: Communicate with stakeholders
     ...

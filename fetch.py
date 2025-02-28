@@ -36,7 +36,7 @@ def top5brands_6mon():
     print('Top 5 Brands for those with users who joined at least 6 months old')
     print(top_5,'\n')
 
-#top5brands_6mon()
+top5brands_6mon()
 
 ###
 
@@ -59,7 +59,7 @@ wellness_bygeneration()
 
 """ 4. Who are Fetchs power users? """
 def power_users():
-    df_power = df_transactions.groupby('USER_ID')['RECEIPT_ID'].count() #grouping users by their associated reciepts
+    df_power = df_transactions.groupby('USER_ID')['RECEIPT_ID'].count() #grouping users by their associated receipts
     top5 = df_power.nlargest(5) #filtering top 5 users
     print("Fetch's Power Users")
     print(top5,'\n')

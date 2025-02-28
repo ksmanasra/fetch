@@ -4,7 +4,7 @@ Data Analyst Assessment
 Repository includes
 1. README file, which includes answers to assessment
 2. SQL/Python scripts
-3. Visualizations
+3. Slack Message
 
 
 First: Explore the Data
@@ -69,5 +69,22 @@ Second: provide SQL queries (doing this using python+pandas)
             2023      15464         -42.31%
             2024      11631         -24.79%
 
-Third: Communicate with stakeholders
-    ...
+Third: Communicate with stakeholders (Slack)
+    
+Hello Fellow Fetchers, I wanted to share an update with you all about some finding I had after an investigation into our data.
+
+Data Quality
+1. We have identified key data points, including unique identifiers, that were missing which affected our ability to properly perform analysis. A more complete version of the data we have can give us more accurate insights. An example of this would be the data we store on products, where barcodes (the unique identifier) are missing.
+2. We have also identified that there were duplicate records for every scanned receipt that was within our data warehouse. There is a work around for removing duplicate records, although the root cause of the issue needs to be investigated.
+3. We only seem to have scanned receipts from the year 2024, even when we have users that have signed up well before the year. We can only provide consumer insights limited to one year, and it would give a better understanding of Fetch's growth over time.
+
+Interesting Trend
+- According to the data, we find that almost all of Fetch's users are within the Boomer, Gen-X, and Millenial generations. 
+- Although, we have virtually no users who are from the "Gen-Z" generation (born 1995-2012) according to the user database. 
+- Within that generation are those who are tech-savvy so they can use the app with ease and many are already working and spending on products in the market.
+- Is there an outreach issue with the younger generation? This would be a great opportunity to discuss how Fetch can tap into a new age demographic. 
+
+Next Steps
+1. Clarification on certain data models: Are the data we hold supposed to behave the way they do? How can we better define some of the data models that we have?
+2. Data Engineering: Can we figure out the root cause of the duplication issue when a user scans a receipt? Also, an explanation to how some datetimes are configured.
+3. Market reach: What is the explanation to why there are no Gen-Z users? What can we do to broaden our user base to younger people? Does Fetch have appeal to younger people?

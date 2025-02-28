@@ -71,7 +71,7 @@ Second: provide SQL queries (doing this using python+pandas)
 
 Third: Communicate with stakeholders (Slack)
     
-Hello Fellow Fetchers, I wanted to share an update with you all about some finding I had after an investigation into our data.
+Hello Fellow Fetchers, the analytics team wanted to share an update with you all about some finding we had after an investigation into our data.
 
 Data Quality
 1. We have identified key data points, including unique identifiers, that were missing which affected our ability to properly perform analysis. A more complete version of the data we have can give us more accurate insights. An example of this would be the data we store on products, where barcodes (the unique identifier) are missing.
